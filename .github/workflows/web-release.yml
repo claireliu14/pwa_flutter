@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Web Release to GitHub Action
 
 # Controls when the workflow will run
 on:
@@ -32,7 +32,7 @@ jobs:
         run: flutter pub get
       
       - name: Building Web in release mode
-        run: flutter build web --release
+        run: flutter build web --base-href "/pwa_flutter/"
       
       - name: Upload Web Build Files
         uses: actions/upload-artifact@v2
